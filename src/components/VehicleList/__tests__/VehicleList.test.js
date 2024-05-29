@@ -67,4 +67,12 @@ describe("<VehicleList /> Tests", () => {
         expect(getByText("fpace")).toBeTruthy();
         expect(getByText("From £40,000")).toBeTruthy();
     });
+
+    it("Should display empty message when no result", () => {
+        useData.mockReturnValue([false, false, []]);
+
+        const { getByText } = render(<VehicleList />);
+
+        expect(getByText("No vehicle found")).toBeTruthy();
+    });
 });

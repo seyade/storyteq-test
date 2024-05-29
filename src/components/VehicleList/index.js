@@ -38,7 +38,7 @@ export default function VehicleList() {
                 ))
             ) : (
                 <div>
-                    <p>No vehicle</p>
+                    <p>No vehicle found</p>
                 </div>
             )}
         </div>
