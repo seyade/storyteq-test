@@ -1,3 +1,83 @@
 .VehicleList {
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.card {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @media (min-width: 768px) {
+        flex: 1 0 auto;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+        padding-bottom: 0.75rem;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        width: 25%;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    &__image-box {
+    }
+
+    &__image {
+        max-width: 100px;
+        height: auto;
+
+        @media (min-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        padding-left: 1rem;
+
+        @media (min-width: 768px) {
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.25rem 0;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+    }
+
+    &__price {
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+        color: #777;
+    }
+
+    &__description {
+        color: #777;
+    }
 }
